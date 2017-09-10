@@ -14,7 +14,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var payload = [Payload]()
-    
+//    var id: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.addSubview(self.refreshControl)
@@ -80,6 +81,21 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return NewsService.instance.payloads.count
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("It works")
+        let id = NewsService.instance.payloads[indexPath.row].id
+        print(id)
+        performSegue(withIdentifier: TO_DETAIL, sender: id)
+        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsVC = segue.destination as? DetailVC {
+            assert(sender as? String != nil)
+            detailsVC.initContent(id: sender as! String)
+        }
     }
 }
 

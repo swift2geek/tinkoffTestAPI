@@ -20,6 +20,7 @@ struct Payload: Decodable {
     let text: String
     let publicationDate: PublicationDate
     let bankInfoTypeId: Int
+    let content: String?
 }
 
 struct PublicationDate: Decodable {
