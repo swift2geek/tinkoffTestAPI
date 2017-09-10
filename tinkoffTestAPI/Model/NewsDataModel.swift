@@ -18,7 +18,12 @@ struct Payload: Decodable {
     let id: String
     let name: String
     let text: String
-    let publicationDate: [String: Int]
+    let publicationDate: PublicationDate
     let bankInfoTypeId: Int
+    let content: String?
+}
+
+struct PublicationDate: Decodable {
+    let milliseconds: Int
 }
 

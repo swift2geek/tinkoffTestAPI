@@ -8,13 +8,14 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainVC: UIViewController {
 
     // Outlets
     @IBOutlet weak var tableView: UITableView!
 
     var payload = [Payload]()
-    
+//    var id: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.addSubview(self.refreshControl)
@@ -57,10 +58,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView.reloadData()
     }
 
+}
 
+extension MainVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsCell {
-            let payload = NewsService.instance.payloads[indexPath.row]
+            let payloads = NewsService.instance.payloads.sorted(by: { current, next in
+                return current.publicationDate.milliseconds > next.publicationDate.milliseconds
+            })
+            let payload = payloads[indexPath.row]
             cell.configureCell(payload: payload)
             return cell
         } else {
@@ -77,12 +83,19 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return NewsService.instance.payloads.count
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("It works")
+        let id = NewsService.instance.payloads[indexPath.row].id
+        print(id)
+        performSegue(withIdentifier: TO_DETAIL, sender: id)
+        
+    }
 
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsVC = segue.destination as? DetailVC {
+            assert(sender as? String != nil)
+            detailsVC.initContent(id: sender as! String)
+        }
+    }
 }
-
-//extension MainVC: UITableViewDataSource, UITableViewDelegate {
-//
-//}
 

@@ -12,4 +12,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL Constants
 let BASE_URL = "https://api.tinkoff.ru/v1/news/"
-let CONTENT_URL = "\(BASE_URL)"
+let CONTENT_URL = "https://api.tinkoff.ru/v1/news_content?id="
+
+// Segues Constants
+let TO_DETAIL = "toDetail"

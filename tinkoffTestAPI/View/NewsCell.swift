@@ -13,10 +13,17 @@ class NewsCell: UITableViewCell {
 // Outlets
     @IBOutlet weak var newsLbl: UILabel!
 
-
     func configureCell(payload: Payload) {
         let title = payload.text ?? ""
-        newsLbl.text = title
-    }
 
+        let textAttributes: [String : Any] = [
+            NSAttributedStringKey.foregroundColor.rawValue: UIColor.black]
+
+        do {
+            let attributedString = try NSAttributedString(data: title.data, options:[.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            newsLbl.attributedText = attributedString
+        } catch {
+            print(error)
+        }
+    }
 }
