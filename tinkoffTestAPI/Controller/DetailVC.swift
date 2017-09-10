@@ -51,8 +51,7 @@ class DetailVC: UIViewController {
         if let text = content {
 
             do {
-                let attributedString = try NSAttributedString(data: text.data, options:[.documentType: NSAttributedString.DocumentType.html,
-                                                                                        .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+                let attributedString = try NSAttributedString(data: text.data, options:[.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
                 textView.linkTextAttributes = textAttributes
                 textView.attributedText = attributedString
             } catch {
