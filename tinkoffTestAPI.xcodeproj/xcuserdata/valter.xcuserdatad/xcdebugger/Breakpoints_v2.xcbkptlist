@@ -6,81 +6,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "tinkoffTestAPI/Services/NewsService.swift"
-            timestampString = "526765917.7751"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "getContent(withId:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tinkoffTestAPI/Controller/DetailVC.swift"
-            timestampString = "526765917.775585"
+            timestampString = "526770504.43057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "initContent(id:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "initHtmlText()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "tinkoffTestAPI.DetailVC.initContent(id: Swift.String) -&gt; ()"
-                  moduleName = "tinkoffTestAPI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
-                  timestampString = "526765917.958817"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "26">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in tinkoffTestAPI.DetailVC.initContent(id: Swift.String) -&gt; ()"
-                  moduleName = "tinkoffTestAPI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
-                  timestampString = "526765917.961355"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "35">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "tinkoffTestAPI/Services/NewsService.swift"
-            timestampString = "526765917.776787"
+            filePath = "tinkoffTestAPI/Controller/DetailVC.swift"
+            timestampString = "526770504.431544"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getContent(withId:completion:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "initContent(id:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tinkoffTestAPI/Controller/DetailVC.swift"
+            timestampString = "526770504.432006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "content"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tinkoffTestAPI.DetailVC.content.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "tinkoffTestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
+                  timestampString = "526768847.150637"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tinkoffTestAPI.DetailVC.content.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "tinkoffTestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
+                  timestampString = "526768847.152852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tinkoffTestAPI.DetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; tinkoffTestAPI.DetailVC"
+                  moduleName = "tinkoffTestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
+                  timestampString = "526768847.15559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "279">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tinkoffTestAPI.DetailVC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;tinkoffTestAPI.DetailVC&gt;"
+                  moduleName = "tinkoffTestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/valter/Swift4/tinkoffTestAPI/tinkoffTestAPI/Controller/DetailVC.swift"
+                  timestampString = "526768847.159023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "199">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -13,22 +13,56 @@ class DetailVC: UIViewController {
     // Outlets
     @IBOutlet weak var textView: UITextView!
 
-    private(set) public var content: String?
-
-    //private(set) public var content = 
+    var content: String? {
+        didSet {
+            if oldValue != content {
+                DispatchQueue.main.async {
+                    self.initHtmlText()
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = content
+        NSLog("\(content)")
+        initHtmlText()
     }
+
 
     func initContent(id: String) {
         NewsService.instance.getContent(withId: id) { (success) in
             if success {
                 self.content = NewsService.instance.contentPayload?.content
+            } else {
+                fatalError()
             }
         }
       
+    }
+
+    func initHtmlText() {
+        let style = NSMutableParagraphStyle()
+        style.paragraphSpacing = 13
+        style.lineHeightMultiple = 1.41
+        let textAttributes: [String : Any] = [
+            NSAttributedStringKey.foregroundColor.rawValue: UIColor.black]
+
+        if let text = content {
+
+            do {
+                let attributedString = try NSAttributedString(data: text.data, options:[.documentType: NSAttributedString.DocumentType.html,
+                                                                                        .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+                textView.linkTextAttributes = textAttributes
+                textView.attributedText = attributedString
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    @IBAction func swipeBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

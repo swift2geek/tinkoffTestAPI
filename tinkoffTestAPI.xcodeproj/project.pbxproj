@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D22A7CFD1F65B21E009AB19D /* ContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22A7CFC1F65B21E009AB19D /* ContentDataModel.swift */; };
+		D22A7D001F65D132009AB19D /* Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22A7CFF1F65D132009AB19D /* Data+Helper.swift */; };
 		D295F37D1F65896700E9B6D8 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295F37C1F65896700E9B6D8 /* DetailVC.swift */; };
 		D2B2BC8D1F64306E00497FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2BC8C1F64306E00497FC2 /* AppDelegate.swift */; };
 		D2B2BC8F1F64306E00497FC2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2BC8E1F64306E00497FC2 /* MainVC.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D22A7CFC1F65B21E009AB19D /* ContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataModel.swift; sourceTree = "<group>"; };
+		D22A7CFF1F65D132009AB19D /* Data+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helper.swift"; sourceTree = "<group>"; };
 		D295F37C1F65896700E9B6D8 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D2B2BC891F64306E00497FC2 /* tinkoffTestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinkoffTestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B2BC8C1F64306E00497FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D22A7CFE1F65D11E009AB19D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D22A7CFF1F65D132009AB19D /* Data+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D2B2BC801F64306E00497FC2 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		D2B2BC8B1F64306E00497FC2 /* tinkoffTestAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D22A7CFE1F65D11E009AB19D /* Helpers */,
 				D2B2BCA31F643C3400497FC2 /* Services */,
 				D2B2BCA41F643C3A00497FC2 /* Utilities */,
 				D2B2BCA21F6434DC00497FC2 /* Model */,
@@ -199,6 +210,7 @@
 				D2B2BC8F1F64306E00497FC2 /* MainVC.swift in Sources */,
 				D2B2BC8D1F64306E00497FC2 /* AppDelegate.swift in Sources */,
 				D2B2BCAA1F645C5300497FC2 /* NewsCell.swift in Sources */,
+				D22A7D001F65D132009AB19D /* Data+Helper.swift in Sources */,
 				D2B2BCA61F643C4B00497FC2 /* Constants.swift in Sources */,
 				D295F37D1F65896700E9B6D8 /* DetailVC.swift in Sources */,
 				D22A7CFD1F65B21E009AB19D /* ContentDataModel.swift in Sources */,
