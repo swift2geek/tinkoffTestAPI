@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainVC: UIViewController {
 
     // Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -57,10 +57,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView.reloadData()
     }
 
+}
 
+extension MainVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsCell {
-            let payload = NewsService.instance.payloads[indexPath.row]
+            let payloads = NewsService.instance.payloads.sorted(by: { current, next in
+                return current.publicationDate.milliseconds > next.publicationDate.milliseconds
+            })
+            let payload = payloads[indexPath.row]
             cell.configureCell(payload: payload)
             return cell
         } else {
@@ -76,13 +81,5 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return NewsService.instance.payloads.count
     }
-
-
-
-
 }
-
-//extension MainVC: UITableViewDataSource, UITableViewDelegate {
-//
-//}
 

@@ -27,7 +27,9 @@ class NewsService {
             do {
                 self.news = try JSONDecoder().decode(News.self, from: data)
                 self.payloads = self.news!.payload
-//                print(self.payloads)
+                NSLog("\(self.payloads[0].publicationDate.milliseconds)")
+                NSLog("\(self.payloads[1].publicationDate.milliseconds)")
+                NSLog("\(self.payloads[2].publicationDate.milliseconds)")
                 completion(true)
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
